@@ -4,7 +4,7 @@
   "description": "Bot for the Gospel",
   "main": "bot.js",
   "scripts": {
-    "start": "node bot.js",
+    "start": "node bots.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
