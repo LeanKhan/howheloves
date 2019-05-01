@@ -1,6 +1,6 @@
 ## How He Loves 🙏
 
-A Twiiter of _hope_ :)
+A Twitter bot for the Gospel
 
 ---
 
