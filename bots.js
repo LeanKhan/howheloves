@@ -17,4 +17,4 @@ function tweet() {
 
 tweet();
 
-setTimeout(tweet, 14400000);
+setInterval(tweet, 14400000);
