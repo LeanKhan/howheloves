@@ -15,4 +15,6 @@ function tweet() {
   );
 }
 
+tweet();
+
 setTimeout(tweet, 14400000);
