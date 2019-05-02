@@ -11,8 +11,9 @@ function tweet() {
   Twitter.post(
     "statuses/update",
     {
-      status: `Jesus Loves You! ❤️
-        ${time.toLocaleString()}
+      status: `
+      Jesus Loves You! ❤️
+      ${time.toLocaleString()}
     `
     },
     (err, data, response) => {
