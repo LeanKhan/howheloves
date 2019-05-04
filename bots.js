@@ -1,4 +1,4 @@
-const twit = require("twit"),
+﻿const twit = require("twit"),
   config = require("./config.js");
 
 console.log("Bot is alive!");
@@ -13,7 +13,7 @@ function tweet() {
     {
       status: `
       Jesus Loves You! ❤️
-      ${time.toLocaleString()}
+    ${time.toLocaleString()}
     `
     },
     (err, data, response) => {
@@ -28,4 +28,4 @@ function tweet() {
 
 tweet();
 
-setInterval(tweet, 14400000);
+setInterval(tweet, 14400000 * 3);
