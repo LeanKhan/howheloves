@@ -26,6 +26,6 @@ function tweet() {
   );
 }
 
-tweet();
+// tweet();
 
-setInterval(tweet, 14400000 * 3);
+setInterval(tweet, 43200000);
