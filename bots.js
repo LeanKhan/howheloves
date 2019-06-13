@@ -12,7 +12,7 @@ function tweet() {
     "statuses/update",
     {
       status: `
-      Jesus Loves You! ❤️ - ${time.toLocaleString()}
+      Jesus Loves You! ❤️ - ${time.toDateString()}
     `
     },
     (err, data, response) => {
