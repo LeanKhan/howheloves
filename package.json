@@ -1,10 +1,10 @@
 {
   "name": "how_he_loves",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Bot for the Gospel",
   "main": "bot.js",
   "scripts": {
-    "start": "node bots.js",
+    "start": "node bot.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
