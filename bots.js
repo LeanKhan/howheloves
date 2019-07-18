@@ -12,13 +12,15 @@ function tweet() {
     "statuses/update",
     {
       status: `
-      Jesus Loves You! ❤️ - ${time.toDateString()}
+      Jesus Loves You! ❤️ 
+      \n ${time.toDateString()}
     `
     },
     (err, data, response) => {
       if (err) {
         // eslint-disable-next-line no-console
         console.log("error", err);
+        throw new Error(err);
       } else {
         // eslint-disable-next-line no-console
         console.log("data => ", data);
@@ -34,6 +36,7 @@ function tweet() {
 
 // tweet();
 
-setInterval(tweet, 86400000);
+// setInterval(tweet, 86400000);
+setInterval(tweet, 500000);
 
 //  Now tweets every 24 hours
