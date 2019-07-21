@@ -10,29 +10,7 @@ console.log("Bot is alive!");
 
 var Twitter = new twit(config);
 
-// function tweet() {
-//   let time = new Date();
-//   Twitter.post(
-//     "statuses/update",
-//     {
-//       status: `
-//       Jesus Loves You! ❤️\n${time.toDateString()}
-//     `
-//     },
-//     err => {
-//       if (err) {
-//         // eslint-disable-next-line no-console
-//         console.log("error", err);
-//         throw new Error(err);
-//       } else {
-//         // eslint-disable-next-line no-console
-//         console.log("Tweeted successfully!");
-//       }
-//     }
-//   );
-// }
-
-// ===== SERVERLESS ==== //
+// ===== SERVERLESS ===== //
 
 module.exports.tweet = (event, context, callback) => {
   let time = new Date();
@@ -48,7 +26,7 @@ module.exports.tweet = (event, context, callback) => {
         // eslint-disable-next-line no-console
         console.log("error", err);
         // throw new Error(err);
-        callback(err);
+        callback(null, "Error occurred => " + err);
       } else {
         // eslint-disable-next-line no-console
         console.log("Tweeted successfully!");
