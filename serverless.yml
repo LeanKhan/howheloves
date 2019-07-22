@@ -42,4 +42,4 @@ functions:
       - schedule:
         name: Daily Tweet
         description: Tweet "Jesus Loves You every 24 hours"
-        rate: cron(0 10 * * ? *)
+        rate: rate(1 day)

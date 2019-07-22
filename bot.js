@@ -27,7 +27,7 @@ function tweet(time) {
       if (err) {
         // eslint-disable-next-line no-console
         // console.log("Twit Error => ", err);
-        throw new Error(err);
+        throw err;
       }
     }
   );
@@ -35,38 +35,14 @@ function tweet(time) {
 
 module.exports.tweet = (event, context, callback) => {
   let time = new Date();
-
   try {
     tweet(time);
+    // eslint-disable-next-line no-console
+    console.log("Tweeted successfully");
     return callback(null, "Tweeted Successfully");
   } catch (err) {
     // eslint-disable-next-line no-console
     console.log("Twit Error => ", err);
     return callback(null, "Success, though error");
   }
-
-  // Twitter.post(
-  //   "statuses/update",
-  //   {
-  //     status: `
-  //     Jesus Loves You! ❤️\n\n${time.toDateString()}
-  //   `
-  //   },
-  //   err => {
-  //     if (err) {
-  //       // eslint-disable-next-line no-console
-  //       console.log("Twit Error => ", err);
-  //       // eslint-disable-next-line no-console
-  //       console.log("Time => ", time);
-  //       // throw new Error(err);
-  //       // context.success();
-  //       return callback(null);
-  //     } else {
-  //       // eslint-disable-next-line no-console
-  //       console.log("Tweeted successfully!");
-  //       // context.success();
-  //       return callback(null);
-  //     }
-  //   }
-  // );
 };
